@@ -7,7 +7,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -30,9 +29,7 @@ class Migration(migrations.Migration):
                 ("text", models.TextField()),
                 (
                     "image",
-                    imagekit.models.fields.ProcessedImageField(
-                        blank=True, null=True, upload_to="images/"
-                    ),
+                    imagekit.models.fields.ProcessedImageField(blank=True, null=True, upload_to="images/"),
                 ),
                 ("created_at", models.DateTimeField(auto_now_add=True)),
                 (
